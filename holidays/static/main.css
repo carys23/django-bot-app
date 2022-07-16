@@ -1,0 +1,167 @@
+html,
+body {
+    display: flex;
+    margin: 0px;
+}
+/* #btn2 {
+    display: flex;
+    flex-direction: row;
+    background-color: brown;
+    justify-content: space-around;
+    position: relative;
+   
+} */
+#bot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    background-color: rgb(228, 235, 235);
+    position: absolute;
+    bottom: 9px;
+    right: 11px;
+    padding: 22px;
+    flex: 1;
+    flex-wrap: wrap;
+    /* height: 20%;
+    width: 20%; */
+
+
+}
+
+#container,
+.container {
+    display: flex;
+}
+
+button.mat-stroked-button {
+    font-size: 12px;
+   
+    /* display: flex; */
+    flex-direction: row;
+}
+
+
+
+#questions,
+.questions {
+    padding-top: 12px;
+    /* margin-left: 20px; */
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    flex-direction: column;
+   
+    
+    
+
+}
+
+
+.bot-image {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    position: relative;
+    /* flex-direction: row; */
+
+}
+
+/* .response {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    color: black;
+    padding-left:90px;
+} */
+
+.mat-raised-button {
+    display: flex;
+    /* padding-top: 90px; */
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(43, 18, 58, 0.418);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 30px;
+   
+
+
+}
+
+
+
+#continents-btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.button,
+.login {
+    justify-content: center;
+    flex-direction: row;
+    
+    /* margin-right: 0; */
+
+}
+
+/* .b {
+    display: flex;
+    padding-top: 90px;
+    flex-direction: row;
+    width: 70px;
+    height: 50px;
+} */
+
+#btn, #btn2 {
+    /* display: flex; */
+    /* padding-top: 90px; */
+    /* flex-direction: row; */
+    width: 70px;
+    height: 50px;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(43, 18, 58, 0.418);
+    justify-content: space-around;
+    gap: 60%;
+}
+
+#btn:hover, #btn2:hover  {
+    background-color: #767eac;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    width: 5%;
+    height: 8%;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+
+
+h1 {
+    display: flex;
+    font-size: 100px;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 900px;
+    height: 300px;
+}
+
+.mat-raised-button:hover {
+    background-color: #767eac;
+
+}
+
+
