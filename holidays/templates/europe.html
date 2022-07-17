@@ -16,8 +16,10 @@
 {% block content %}
 
 
+{% for data in countries %}
+<button mat-button-update mat-raised-button color="primary" class="login" id="btn2" >{{ data }}</button>
+{% endfor %}
 
-<button mat-button-update mat-raised-button color="primary" class="login" id="btn2" ></button>
 
 
 {% endblock %}
