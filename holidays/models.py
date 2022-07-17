@@ -45,11 +45,11 @@ class Continent(models.Model):
     def __str__(self):
         return(f"{self.continents_field}")
 
-# class Countries(models.Model):
-#     continent = models.ForeignKey(Continent, on_delete=models.CASCADE)
-#     countries = models.CharField(max_length =100)
-#     def __str__(self):
-#         return(f"{self.continent}, {self.countries}")
+class Countries(models.Model):
+    continent = models.ForeignKey(Continent, on_delete=models.CASCADE)
+    countries = models.CharField(max_length =100)
+    def __str__(self):
+        return(f"{self.continent}, {self.countries}")
 
 # class Category(models.Model):
 #     countries = models.ForeignKey(Countries, on_delete=models.CASCADE)
