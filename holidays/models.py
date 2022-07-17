@@ -27,13 +27,15 @@ class Continent(models.Model):
 
 
 class AfricaCountries(models.Model):
+    continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
-    # continent = models.ManyToManyField(Continent)
+    
 
     def __str__(self):
         return self.countries
 
 class AustraliaCountries(models.Model):
+    continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
 
@@ -41,6 +43,7 @@ class AustraliaCountries(models.Model):
         return self.countries
 
 class AntarcticaCountries(models.Model):
+    continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
 
@@ -48,6 +51,7 @@ class AntarcticaCountries(models.Model):
         return self.countries
 
 class NorthAmericaCountries(models.Model):
+    continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
 
@@ -56,6 +60,7 @@ class NorthAmericaCountries(models.Model):
 
 
 class EuropeCountries(models.Model):
+    continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
     
@@ -65,10 +70,11 @@ class EuropeCountries(models.Model):
 
 
 class AsiaCountries(models.Model):
+    continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
     def __str__(self):
-        return self.countries
+        return (F'Countries are : {self.countries} and continent are {self.continent}')
 
 # class TypeHoliday(models.Model):
 #     type_hol = models.CharField(max_length =100)
