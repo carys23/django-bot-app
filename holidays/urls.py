@@ -11,5 +11,5 @@ urlpatterns = [
     path('africa/', views.africa, name="africa"),
     path('europe', views.europe, name="europe"),
     path('north_america/', views.north_america, name="north_america"),
-    path('TypeHoliday/', views.TypeHoliday, name="TypeHoliday"),
+    path('TypeHoliday/', views.TypeHoliday, name="hol-type"),
 ]

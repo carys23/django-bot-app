@@ -59,7 +59,7 @@ class AsiaCountries(models.Model):
     def __str__(self):
         return (F'Countries are : {self.countries} and continent are {self.continent}')
 
-class TypeHol(models.Model):
+class TypeHoliday(models.Model):
     type_hol = models.CharField(max_length =100)
     temp = models.CharField(max_length =100)
 

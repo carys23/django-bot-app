@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 
-from .models import Holiday, Continent , AfricaCountries, AsiaCountries, NorthAmericaCountries, AntarcticaCountries, AustraliaCountries, EuropeCountries
+from .models import Holiday, Continent , AfricaCountries, AsiaCountries, NorthAmericaCountries, AntarcticaCountries, AustraliaCountries, EuropeCountries, TypeHoliday
 
 
 def login(request):
@@ -42,4 +42,4 @@ def africa(request):
 
 def TypeHoliday(request):
     holiday = {"TypeHoliday": TypeHoliday.objects.all()}
-    return render (request, 'TypeHoliday.html', holiday )
+    return render (request, 'hol-type.html', holiday )
