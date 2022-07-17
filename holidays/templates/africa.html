@@ -13,21 +13,28 @@
 
 {% endblock %}
 
-{% block content %}
 
-{% for data in countries %}
+
+{% block content %}
+<div class="bot" id="bot">
+    <div class="container" id="container">
+        <img id="bot-image" class="bot-image" src="{% static 'monkey.png' %}">
+        <h3>What type of holiday are you looking for?</h3>
+        <button mat-button-update mat-raised-button color="primary" class="btn2" id="btn2">
+            <div class="div_icons"> <a id='link'  href="{% url 'type' %}">
+                
+            </div>
+{% for data in holiday %}
+
 {{ data }}
+
+</button>
 {% endfor %}
 
-<button mat-button-update mat-raised-button color="primary" class="btn2" id="btn2">
 
-            
+        <!-- container div -->
     </div>
-    
-</button>
-
-
-
+    <!-- bot div  -->
+</div>
 
 {% endblock %}
-

@@ -3,14 +3,7 @@ body {
     display: flex;
     margin: 0px;
 }
-/* #btn2 {
-    display: flex;
-    flex-direction: row;
-    background-color: brown;
-    justify-content: space-around;
-    position: relative;
-   
-} */
+
 #bot {
     display: flex;
     flex-direction: row;
@@ -70,14 +63,7 @@ button.mat-stroked-button {
 
 }
 
-/* .response {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 100px;
-    color: black;
-    padding-left:90px;
-} */
+
 
 .mat-raised-button {
     display: flex;
@@ -91,9 +77,6 @@ button.mat-stroked-button {
     justify-content: space-around;
     position: relative;
     margin-top: 30px;
-   
-
-
 }
 
 
@@ -112,26 +95,34 @@ button.mat-stroked-button {
 
 }
 
-/* .b {
+h2 {
     display: flex;
-    padding-top: 90px;
-    flex-direction: row;
-    width: 70px;
-    height: 50px;
-} */
+    justify-content: center;
+    font-size: 12px;
+
+}
+a, a:hover {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
 
 #btn, #btn2 {
     /* display: flex; */
     /* padding-top: 90px; */
     /* flex-direction: row; */
-    width: 70px;
+    width: 22%;
     height: 50px;
     flex-wrap: nowrap;
     display: flex;
     flex-direction: row;
     background-color: rgba(43, 18, 58, 0.418);
-    justify-content: space-around;
+    justify-content: center;
     gap: 60%;
+    margin-left: 10px;
+    align-items: center;
+    border-radius: 10px;
+    
 }
 
 #btn:hover, #btn2:hover  {
