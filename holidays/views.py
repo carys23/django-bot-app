@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
-from .models import Holiday, Continent
+from .models import Holiday, Continent , AfricaCountries, AsiaCountries, NorthAmericaCountries, AntarcticaCountries, AustraliaCountries, EuropeCountries
 
 
 
@@ -10,30 +10,31 @@ def login(request):
     return render(request, 'login.html', {})
 
 def countries(request):
-    return render(request, 'countries.html', {})
+    holiday = {"continent": Continent.objects.all()}
+    return render (request, 'countries.html', holiday )
 
 def asia(request):
-    return render(request, 'asia.html', {})
+    holiday = {"countries": AsiaCountries.objects.all()}
 
-def africa(request):
-    return render(request, 'africa.html', {})
+    return render (request, 'asia.html', holiday )
 
 def australia(request):
-    return render(request, 'africa.html', {})
+    holiday = {"countries": AustraliaCountries.objects.all()}
+    return render(request, 'australia.html', holiday)
 
-def south_america(request):
-    return render(request, 'africa.html', {})
+def north_america(request):
+    holiday = {"countries": NorthAmericaCountries.objects.all()}
+    return render(request, 'north_america.html', holiday)
 
 def antarctica(request):
-    return render(request, 'africa.html', {})
+    holiday = {"countries": AntarcticaCountries.objects.all()}
+    return render(request, 'antarctica.html', holiday)
 
 def europe(request):
-    return render(request, 'africa.html', {})
+    holiday = {"countries": EuropeCountries.objects.all()}
+    return render(request, 'europe.html', holiday)
 
-def detail(request, holiday_id):
-    holiday = {"holiday": Holiday.objects.get(pk=holiday_id)}
-    return render (request, "countries.html" , holiday)
+def africa(request):
+    holiday = {"countries": AfricaCountries.objects.all()}
 
-
-# def index(request):
-#     return HttpResponse("Hello, world. You're at the couintries index.")
+    return render (request, 'africa.html', holiday )
