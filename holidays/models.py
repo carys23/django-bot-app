@@ -76,17 +76,18 @@ class AsiaCountries(models.Model):
     def __str__(self):
         return (F'Countries are : {self.countries} and continent are {self.continent}')
 
-# class TypeHoliday(models.Model):
-#     type_hol = models.CharField(max_length =100)
-#     holiday_details = models.ForeignKey(Holiday, on_delete=models.CASCADE )
+class TypeHoliday(models.Model):
+    type_hol = models.CharField(max_length =100)
 
-#     def __str__(self):
-#         return (f'types is hoildays {self.type_hol} ')
+    def __str__(self):
+        return (f'types is hoildays {self.type_hol} ')
 
-# class Temp(models.Model):
-#     holiday = models.ManyToManyField(Holiday)
-#     temp = models.CharField(max_length =100)
+class Temp(models.Model):
+    temp = models.CharField(max_length =100)
 
+
+# class Result(models.Model):
+#     result = 
 #     def __str__(self):
 #         return (f'types is hoildays {self.temp} ')
 
