@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Holiday, Continent, AsiaCountries, AfricaCountries, NorthAmericaCountries, EuropeCountries, AntarcticaCountries, AustraliaCountries, TypeHoliday, Temp
+from .models import Holiday, Continent, AsiaCountries, AfricaCountries, NorthAmericaCountries, EuropeCountries, AntarcticaCountries, AustraliaCountries, TypeHoliday, Temp, Result
 admin.site.register(Holiday)
 admin.site.register(Continent)
 admin.site.register(AfricaCountries)
@@ -11,7 +11,7 @@ admin.site.register(AntarcticaCountries)
 admin.site.register(AustraliaCountries)
 admin.site.register(TypeHoliday)
 admin.site.register(Temp)
-# admin.site.register(Result)
+admin.site.register(Result)
 # admin.site.register(
 # admin.site.register(
 # admin.site.register(

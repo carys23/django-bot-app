@@ -86,10 +86,10 @@ class Temp(models.Model):
     temp = models.CharField(max_length =100)
 
 
-# class Result(models.Model):
-#     result = 
-#     def __str__(self):
-#         return (f'types is hoildays {self.temp} ')
+class Result(models.Model):
+    result = models.ManyToManyField(Holiday)
+    def __str__(self):
+        return (f'types is hoildays {self.result} ')
 
 
 # # class Type(models.Models):
