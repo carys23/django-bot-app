@@ -67,9 +67,6 @@ class AsiaCountries(models.Model):
     continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
-    def __str__(self):
-        return (F'Countries are : {self.countries} and continent are {self.continent}')
-
 class TypeHoliday(models.Model):
     ref = models.ManyToManyField(HolidayRef)
     type_hol = models.CharField(max_length =100)
