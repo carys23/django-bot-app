@@ -5,21 +5,28 @@ from django.db import models
 
 from django import forms
 
+class HolidayRef(models.Model):
+    ref = models.IntegerField()
+    
+
+
 class Continent(models.Model):
     continents_field = models.CharField(max_length =100)
+    ref = models.ManyToManyField(HolidayRef)
     
     def __str__(self):
         return self.continents_field
 
 class AfricaCountries(models.Model):
+    ref = models.ManyToManyField(HolidayRef)
     continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
-    
 
     def __str__(self):
         return self.countries
 
 class AustraliaCountries(models.Model):
+    ref = models.ManyToManyField(HolidayRef)
     continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
@@ -28,6 +35,7 @@ class AustraliaCountries(models.Model):
         return self.countries
 
 class AntarcticaCountries(models.Model):
+    ref = models.ManyToManyField(HolidayRef)
     continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
@@ -36,6 +44,7 @@ class AntarcticaCountries(models.Model):
         return self.countries
 
 class NorthAmericaCountries(models.Model):
+    ref = models.ManyToManyField(HolidayRef)
     continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
@@ -45,6 +54,7 @@ class NorthAmericaCountries(models.Model):
 
 
 class EuropeCountries(models.Model):
+    ref = models.ManyToManyField(HolidayRef)
     continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
@@ -53,6 +63,7 @@ class EuropeCountries(models.Model):
 
 
 class AsiaCountries(models.Model):
+    ref = models.ManyToManyField(HolidayRef)
     continent = models.ManyToManyField(Continent)
     countries = models.CharField(max_length =100)
 
@@ -60,6 +71,7 @@ class AsiaCountries(models.Model):
         return (F'Countries are : {self.countries} and continent are {self.continent}')
 
 class TypeHoliday(models.Model):
+    ref = models.ManyToManyField(HolidayRef)
     type_hol = models.CharField(max_length =100)
     temp = models.CharField(max_length =100)
 
@@ -67,8 +79,8 @@ class TypeHoliday(models.Model):
         return (f'types is hoildays {self.type_hol} ')
 
 
-
 class Holiday(models.Model):
+    ref = models.ManyToManyField(HolidayRef)
     continent = models.ManyToManyField(Continent)
     # type = models.ManyToManyField(TypeHol)
     HotelName = models.CharField(max_length =100)
