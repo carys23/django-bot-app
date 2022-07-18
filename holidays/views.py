@@ -1,6 +1,6 @@
 from typing import Type
 from django.shortcuts import render
-
+from .forms import ListForm
 # Create your views here.
 from django.http import HttpResponse
 
@@ -41,5 +41,14 @@ def africa(request):
     return render (request, 'africa.html', holiday )
 
 def TypeHoliday(request):
-    holiday = {"TypeHoliday": TypeHoliday.objects.all()}
-    return render (request, 'hol-type.html', holiday )
+    if request.method == 'POST':
+        form = TypeHoliday(request.POST or None)
+
+        if form.is_valid():
+            form.save()
+            holiday = {"TypeHoliday": TypeHoliday.objects.all()}
+            return render (request, 'hol-type.html', holiday )
+
+    else:
+        holiday = {"TypeHoliday": TypeHoliday.objects.all()}
+        return render (request, 'hol-type.html', holiday )
